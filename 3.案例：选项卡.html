@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .tabsbox {
+            width: 800px;
+            height: 400px;
+            border: 1px solid #fc6700;
+            margin: 0 auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+
+        .navbar ul {
+            overflow: hidden;
+        }
+        .navbar ul li {
+            float: left;
+            width: 80px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            border-right: 1px solid #999;
+            border-bottom: 1px solid #999;
+        }
+        .navbar ul li.liactive {
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="tabsbox">
+        <div class="navbar">
+            <ul>
+                <li class="liactive">选项一</li>
+                <li>选项二</li>
+                <li>选项三</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
