@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Star{
+            constructor(name,age) {
+                this.name = name;
+                this.age = age;
+            }
+
+            sing(music) {
+                console.log(this.name + music);
+            }
+        }
+
+        var ldy = new Star("刘德华",19);
+        var zxy = new Star("张学友",20);
+        console.log(ldy.name);
+        console.log(zxy.name);
+        ldy.sing("11111");
+        zxy.sing("22222");
+    </script>
+</body>
+</html>
