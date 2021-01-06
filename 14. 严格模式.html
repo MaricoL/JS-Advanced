@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict';
+        // 1. 严格模式下，变量必须声明后使用
+        var a = 10;
+        console.log(a);
+
+        // 2. 严格模式下，不能delete变量
+        // delete a;
+
+        // 3. 全局作用域函数的this指向undefined
+        // 定时器函数和事件处理函数中this指向不变
+        // function fn(){
+        //     console.log(this);
+        // }
+
+        // 4. 严格模式下，函数参数列表变量名不可以重复
+        function fn2(a,a){
+            console.log(a+a);
+        }
+
+        fn2(1,1);
+    </script>
+</body>
+</html>

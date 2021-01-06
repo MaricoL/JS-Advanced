@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        var arrLike = {
+            '0': 1,
+            '1': 2,
+            length: 2
+        };
+
+        // 将伪数组转换成真正的数组
+        var arr = Array.from(arrLike);
+        console.log(arr);
+
+        // 将伪数组转换成真正的数组并进行处理
+        var arr2 = Array.from(arrLike,item=>item*2);
+        console.log(arr2);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function fn(x, y) {
+            console.log("fn方法");
+            console.log(this);
+            console.log(x + y);
+        }
+
+        var o = { name: "andy" }
+
+        // 1. 调用函数
+        fn.call();
+        // 2. 重新制定this
+        fn.call(o);
+        // 3. 可以传参
+        fn.call(o, 1, 2);
+    </script>
+</body>
+
+</html>

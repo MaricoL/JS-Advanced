@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,12 +22,13 @@
             position: absolute;
             top: 50%;
             left: 50%;
-            transform: translate(-50%,-50%);
+            transform: translate(-50%, -50%);
         }
 
         .navbar ul {
             overflow: hidden;
         }
+
         .navbar ul li {
             float: left;
             width: 80px;
@@ -37,6 +39,7 @@
             border-bottom: 1px solid #999;
             position: relative;
         }
+
         .navbar ul li i {
             position: absolute;
             top: 0;
@@ -48,7 +51,7 @@
             border-bottom: none;
         }
 
-        .tabadd span{
+        .tabadd span {
             position: absolute;
             top: 0;
             right: 0;
@@ -72,16 +75,23 @@
 
         .tabscon section.conactive {
             display: block;
+            height: 100%;
+        }
+
+        .tabsbox  input {
+            width: 60%;
+            height: 40%;
         }
     </style>
 </head>
+
 <body>
     <div id="tabsbox" class="tabsbox">
         <div class="navbar">
             <ul>
-                <li class="liactive">选项一<i class="fa fa-window-close"></i></li>
-                <li>选项二<i class="fa fa-window-close"></i></li>
-                <li>选项三<i class="fa fa-window-close"></i></li>
+                <li class="liactive"><span>选项一</span><i class="fa fa-window-close"></i></li>
+                <li><span>选项二</span><i class="fa fa-window-close"></i></li>
+                <li><span>选项三</span><i class="fa fa-window-close"></i></li>
             </ul>
             <div class="tabadd">
                 <span>+</span>
@@ -97,4 +107,5 @@
 
     <script src="./js/tabs.js"></script>
 </body>
+
 </html>

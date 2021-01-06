@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 箭头函数中的this指向定义函数时作用域中的this，而对象不会产生作用域，因此this指向window
+        var obj = {
+            age: 18,
+            say: () => {
+                console.log(this.age);
+            }
+        }
+
+        obj.say();      // undefined
+    </script>
+</body>
+</html>

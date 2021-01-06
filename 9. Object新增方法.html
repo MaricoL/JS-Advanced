@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // keys
+        // var obj = {id:1,name:'abc',age:18};
+        // var keys = Object.keys(obj);
+        // console.log(keys);
+       
+        // defineProperty
+        var obj = {id:1,name:'小米',price:2000};
+        console.log(obj);
+
+        Object.defineProperty(obj,'name',{
+            value: '华为'
+        });
+        Object.defineProperty(obj,'id',{
+            writable: true
+        });
+        obj.id = 100;
+        console.log(obj);
+
+        //  enumerable 不可遍历，默认值为 false
+        Object.defineProperty(obj,'name',{
+            enumerable: false   
+        });
+        console.log(obj);
+        console.log(Object.keys(obj));
+
+        // configurable 不可delete对象属性，不可修改对象属性的特性
+        Object.defineProperty(obj,'price',{
+            configurable: false
+        });
+        delete obj.price;
+        console.log(obj);
+
+        Object.defineProperty(obj,'price',{
+            writable: false
+        });
+        obj.price = 1;
+        console.log(obj);
+
+    </script>
+</body>
+</html>

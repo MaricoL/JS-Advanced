@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Star(name, age) {
+            this.name = name;
+            this.age = age;
+        }
+
+        // 方式一：
+        // Star.prototype.sing = function () {
+        //     console.log(this.name + "sing!");
+        // }
+        // Star.prototype.dance = function () {
+        //     console.log(this.name + "dance!");
+        // }
+
+        // 方式二：
+        Star.prototype = {
+            // 如果以对象赋值的形式修改了原型，则需要重新指定构造函数
+            constructor: Star,
+            sing: function () {
+                console.log(this.name + "sing!");
+            },
+            dance: function () {
+                console.log(this.name + "dance!");
+            }
+        }
+
+        var s = new Star("ldh",20);
+
+        console.log(Star.prototype);
+        console.log(s.__proto__);
+
+
+
+
+    </script>
+</body>
+
+</html>

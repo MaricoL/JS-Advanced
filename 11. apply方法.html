@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function fn(arr) {
+            console.log(this);
+            console.log(arr);
+        }
+
+        var o = {name: 'andy'};
+        fn.apply(o,['a','b','c']);
+
+        var arr = [1,2,3];
+        // max函数的实参需要参数列表的形式进行传递
+        // apply函数可以将数组的像是传递给max函数
+        var max = Math.max.apply(Math,arr);
+        console.log(max);
+    </script>
+</body>
+</html>

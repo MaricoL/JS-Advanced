@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>按钮1</button>
+    <button>按钮2</button>
+    <button>按钮3</button>
+
+    <script>
+        var btns = document.querySelectorAll("button");
+        Array.from(btns).forEach(btn => {
+            btn.addEventListener("click", function () {
+                this.disabled = true;
+                setTimeout(function () {
+                    this.disabled = false;
+                }.bind(this), 2000);
+            });
+        });
+    </script>
+</body>
+
+</html>

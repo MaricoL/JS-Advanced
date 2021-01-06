@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Father(name,age) {
+            this.name = name;
+            this.age = age;
+
+            this.fa = function() {
+                console.log("father...");
+            }
+        }
+
+        function Son(name,age,school) {
+            Father.call(this,name,age);
+            this.school = school;
+        }
+
+        // 继承父类的方法
+        Son.prototype = new Father();
+        // 这是子构造函数专门的方法
+        Son.prototype.exam = function() {
+            console.log("exam..");
+        }
+        var son = new Son("刘德华",18,"学校");
+        console.log(son);
+        son.fa();
+        son.exam();
+    </script>
+</body>
+</html>

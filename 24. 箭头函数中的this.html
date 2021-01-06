@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var obj = {name: 'zhangsan'};
+        function fn() {
+            console.log(this);
+            return () => {
+                console.log(obj);
+            }
+        }
+
+        var rsFun = fn.call(obj);   // {name: "zhangsan"}
+
+        // 箭头函数中的this指向的是定义时区域中的this
+        rsFun();                    // {name: "zhangsan"}
+    </script>
+</body>
+</html>

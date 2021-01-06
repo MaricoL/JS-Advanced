@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var obj = {
+            name: 'lzl',
+            sex: 'male',
+            info: {
+                age: 20
+            }
+        };
+
+        var o = {};
+
+        // 浅拷贝,其中 info 为对象，指挥拷贝其地址
+        Object.assign(o,obj);
+        console.log(obj);
+        console.log(o);
+
+        // 修改 name 属性，则只有旧对象 obj 会改变
+        obj.name = 'abc';
+        console.log(obj);
+        console.log(o);
+
+        // 修改 info.age 的值，则两个对象中的 info.age 都会改变
+        obj.info.age = 30;
+        console.log(obj);
+        console.log(o);
+
+    </script>
+</body>
+</html>

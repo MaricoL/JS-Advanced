@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li>111</li>
+        <li>222</li>
+        <li>333</li>
+    </ul>
+
+    <script>
+        var lis = document.querySelectorAll("li");
+        // Array.from(lis).forEach((li,index)=>{
+        //     li.addEventListener("click",()=>{
+        //         console.log(index);
+        //     });
+        // });
+
+        // 闭包
+        for (var i = 0; i < lis.length; i++) {
+            (function (i) {
+                lis[i].onclick = function () {
+                    console.log(i);
+                }
+            })(i);
+        }
+    </script>
+</body>
+
+</html>

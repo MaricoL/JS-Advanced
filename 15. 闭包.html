@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 闭包：一个作用域可以访问另一个函数内部局部变量的函数
+        // 作用：延伸了变量的作用范围
+        function fn() {
+            var num = 10;
+
+            // function fun() {
+            //     console.log(num);
+            // }
+
+            // return fun;
+
+            return function() {
+                console.log(num);
+            }
+        }
+
+        var f = fn();
+        f();
+
+
+        // 使用 立即执行函数 写闭包
+        (function(){
+            var abc = 100;
+            return function(){
+                console.log(abc);
+            }
+        })()();
+    </script>
+</body>
+</html>
