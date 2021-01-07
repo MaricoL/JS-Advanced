@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var str1 = 'ABC';
+        console.log(`这是模板字符串：${str1}`);  // 这是模板字符串：ABC
+        
+        var obj = {name:'zhangsan',age:18};
+        var template = `
+            <div>${obj.name}</div>
+            <div>${obj.age}</div>
+        `;
+        console.log(template);
+
+        function fn() {
+            return  'fn方法';
+        }
+
+        console.log(`调用方法：${fn()}`);   // 调用方法：fn方法
+    </script>
+</body>
+</html>

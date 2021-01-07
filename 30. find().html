@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr = [{
+            id: 1,
+            name: '张三'
+        },{
+            id: 2,
+            name: '李四'
+        }];
+
+        // find：返回第一个符合条件的对象
+        var rs1 = arr.find(item => item.id === 2);
+        console.log(rs1);           // {id: 2, name: "李四"}
+
+        var rs2 = arr.find(item => item.id === 3);
+        console.log(rs2);           // undefined
+
+        // findIndex：找出第一个符合条件的下标
+        var arr2 = [1,2,3,4];
+        var rs3 = arr2.findIndex(item => item > 3);
+        console.log(rs3);           // 3
+
+        // includes：判断数组中是否存在元素
+        var arr3 = ['a','b','c','d'];
+        var rs4 = arr3.includes('c');
+        console.log(rs4);           // true
+        var rs5 = arr3.includes('e');
+        console.log(rs5);           // false
+    </script>
+</body>
+</html>
